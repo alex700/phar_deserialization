@@ -1,0 +1,29 @@
+{
+    "name": "alex700/phar_deserialization",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "ambionics/phpggc",
+                "version": "1.0",
+                "source": {
+                    "url": "https://github.com/ambionics/phpggc.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }],
+    "require": {
+        "guzzlehttp/guzzle": "^6.5",
+        "ambionics/phpggc": "1.0",
+        "cweagans/composer-patches": "^1.6"
+    },
+    "extra": {
+        "patches": {
+            "ambionics/phpggc": {
+                "Extend RCE": "patches/ambionics_guzzle_rce2.patch"
+            }
+        }
+    }
+}
