@@ -13,17 +13,10 @@
                     "reference": "master"
                 }
             }
-        }],
-    "require": {
-        "guzzlehttp/guzzle": "^6.5",
-        "ambionics/phpggc": "1.0",
-        "cweagans/composer-patches": "^1.6"
-    },
-    "extra": {
-        "patches": {
-            "ambionics/phpggc": {
-                "Extend RCE": "patches/ambionics_guzzle_rce2.patch"
-            }
         }
+    ],
+    "require": {
+        "ambionics/phpggc": "1.0",
+        "symfony/symfony": "4.3.7"
     }
 }
